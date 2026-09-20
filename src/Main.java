@@ -204,7 +204,7 @@ public class Main {
                 return "text/plain";
        }
 
-
+       
         if (fileName.endsWith(".svg")) {
 
             return "image/svg+xml";
