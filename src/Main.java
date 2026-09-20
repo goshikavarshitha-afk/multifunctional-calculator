@@ -1,6 +1,5 @@
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
-
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.nio.file.Files;
@@ -196,6 +195,14 @@ public class Main {
             return "application/javascript; charset=UTF-8";
 
         }
+
+        if (fileName.endsWith(".xml")) {
+                return "application/xml";
+        }
+
+        if (fileName.endsWith(".txt")) {
+                return "text/plain";
+       }
 
 
         if (fileName.endsWith(".svg")) {
