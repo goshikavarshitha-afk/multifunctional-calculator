@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Multi-Functional Calculator</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <!-- ==================================================
+         HEADER
+         ================================================== -->
+
+    <header class="header">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                ⚡
+            </div>
+
+            <div>
+
+                <h1>
+                    MULTI-FUNCTIONAL CALCULATOR
+                </h1>
+
+                <p>
+                    Full-Stack Java SE & Modern Vanilla Web Dashboard
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="connection">
+
+            <span class="connection-dot"></span>
+
+            Connected
+
+            <span class="connection-text">
+                (Java SE • Java Math)
+            </span>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         NAVIGATION
+         ================================================== -->
+
+    <nav class="navigation">
+
+
+        <button
+            class="nav-btn active"
+            data-section="dashboard"
+        >
+
+            <span>＋</span>
+
+            Basic Calculator
+
+        </button>
+
+
+
+        <button
+            class="nav-btn"
+            data-section="advanced"
+        >
+
+            <span>◢</span>
+
+            Advanced Calculator
+
+        </button>
+
+
+
+        <button
+            class="nav-btn"
+            data-section="utilities"
+        >
+
+            <span>▣</span>
+
+            Number Utilities
+
+        </button>
+
+
+
+        <button
+            class="nav-btn"
+            data-section="converter"
+        >
+
+            <span>▣</span>
+
+            Unit Converter
+
+        </button>
+
+
+
+        <button
+            class="nav-btn"
+            data-section="age"
+        >
+
+            <span>▤</span>
+
+            Age Calculator
+
+        </button>
+
+
+
+        <button
+            class="nav-btn"
+            data-section="history"
+        >
+
+            <span>▤</span>
+
+            History
+
+        </button>
+
+    </nav>
+
+
+
+    <!-- ==================================================
+         BASIC CALCULATOR TAB
+         ================================================== -->
+
+    <section
+        id="dashboard"
+        class="section active-section"
+    >
+
+        <div class="dashboard-grid">
+
+
+            <!-- BASIC CALCULATOR ONLY -->
+
+            <div class="calculator-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="badge basic-badge">
+                            BASIC
+                        </span>
+
+                        <h2>
+                            Basic Calculator
+                        </h2>
+
+                    </div>
+
+
+                    <span class="card-description">
+                        Two-number arithmetic
+                    </span>
+
+                </div>
+
+
+
+                <!-- NUMBER 1 -->
+
+                <div class="input-group">
+
+                    <label>
+                        Number 1
+                    </label>
+
+                    <input
+                        type="number"
+                        id="basicNum1"
+                        placeholder="e.g. 20"
+                    >
+
+                </div>
+
+
+
+                <!-- OPERATIONS -->
+
+                <div class="operation-group">
+
+                    <label>
+                        Select Operation
+                    </label>
+
+
+                    <div class="operation-buttons">
+
+
+                        <button
+                            type="button"
+                            class="basic-operation active"
+                            data-operation="+"
+                        >
+                            +
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="basic-operation"
+                            data-operation="-"
+                        >
+                            −
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="basic-operation"
+                            data-operation="*"
+                        >
+                            ×
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="basic-operation"
+                            data-operation="/"
+                        >
+                            ÷
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="basic-operation"
+                            data-operation="%"
+                        >
+                            %
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- NUMBER 2 -->
+
+                <div class="input-group">
+
+                    <label>
+                        Number 2
+                    </label>
+
+                    <input
+                        type="number"
+                        id="basicNum2"
+                        placeholder="e.g. 5"
+                    >
+
+                </div>
+
+
+
+                <!-- BUTTONS -->
+
+                <div class="button-row">
+
+
+                    <button
+                        class="calculate-btn"
+                        id="basicCalculate"
+                    >
+
+                        Calculate ↗
+
+                    </button>
+
+
+                    <button
+                        class="clear-btn"
+                        id="basicClear"
+                    >
+
+                        Clear
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- RESULT -->
+
+                <div class="result-box">
+
+
+                    <span class="result-label">
+                        RESULT
+                    </span>
+
+
+                    <strong id="basicResult">
+                        —
+                    </strong>
+
+
+                    <small id="basicMessage">
+                        Enter numbers and click Calculate
+                    </small>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         ADVANCED CALCULATOR TAB
+         ================================================== -->
+
+    <section
+        id="advanced"
+        class="section"
+    >
+
+        <div class="dashboard-grid">
+
+
+            <!-- ADVANCED CALCULATOR ONLY -->
+
+            <div class="calculator-card">
+
+
+                <div class="card-header">
+
+
+                    <div>
+
+                        <span class="badge advanced-badge">
+                            ADVANCED
+                        </span>
+
+                        <h2>
+                            Advanced Calculator
+                        </h2>
+
+                    </div>
+
+
+                    <span class="card-description">
+                        Powers, roots, & percentages
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- OPERATION -->
+
+                <div class="input-group">
+
+
+                    <label>
+                        Select Operation
+                    </label>
+
+
+                    <select id="advancedOperation">
+
+
+                        <option value="square">
+                            Square (x²)
+                        </option>
+
+
+                        <option value="cube">
+                            Cube (x³)
+                        </option>
+
+
+                        <option value="sqrt">
+                            Square Root (√x)
+                        </option>
+
+
+                        <option value="power">
+                            Power (xʸ)
+                        </option>
+
+
+                        <option value="percentage">
+                            Percentage
+                        </option>
+
+
+                        <option value="sin">
+                            Sine (sin)
+                        </option>
+
+
+                        <option value="cos">
+                            Cosine (cos)
+                        </option>
+
+
+                        <option value="tan">
+                            Tangent (tan)
+                        </option>
+
+
+                        <option value="log">
+                            Logarithm (log)
+                        </option>
+
+
+                        <option value="abs">
+                            Absolute Value
+                        </option>
+
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- INPUT X -->
+
+                <div class="input-group">
+
+                    <label>
+                        Input Number (x)
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="advancedNumber"
+                        placeholder="e.g. 5"
+                    >
+
+                </div>
+
+
+
+                <!-- SECOND INPUT -->
+
+                <div
+                    class="input-group hidden"
+                    id="advancedSecondGroup"
+                >
+
+                    <label id="advancedSecondLabel">
+                        Second Number (y)
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="advancedSecondNumber"
+                        placeholder="e.g. 2"
+                    >
+
+                </div>
+
+
+
+                <!-- BUTTONS -->
+
+                <div class="button-row">
+
+
+                    <button
+                        class="calculate-btn"
+                        id="advancedCalculate"
+                    >
+
+                        Calculate ↗
+
+                    </button>
+
+
+                    <button
+                        class="clear-btn"
+                        id="advancedClear"
+                    >
+
+                        Clear
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- RESULT -->
+
+                <div class="result-box">
+
+
+                    <span class="result-label">
+                        RESULT
+                    </span>
+
+
+                    <strong id="advancedResult">
+                        —
+                    </strong>
+
+
+                    <small id="advancedMessage">
+                        Select operation and click Calculate
+                    </small>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         NUMBER UTILITIES TAB
+         ================================================== -->
+
+    <section
+        id="utilities"
+        class="section"
+    >
+
+
+        <div class="single-card">
+
+
+            <div class="card-header">
+
+
+                <div>
+
+                    <span class="badge utility-badge">
+                        UTILITY
+                    </span>
+
+
+                    <h2>
+                        Number Utilities
+                    </h2>
+
+                </div>
+
+
+                <span class="card-description">
+                    Multiple number checks
+                </span>
+
+
+            </div>
+
+
+
+            <div class="input-group">
+
+
+                <label>
+                    Enter Number
+                </label>
+
+
+                <input
+                    type="number"
+                    id="utilityNumber"
+                    placeholder="e.g. 121"
+                >
+
+            </div>
+
+
+
+            <label class="utility-label">
+                Select Operations
+            </label>
+
+
+
+            <div class="checkbox-grid">
+
+
+                <label class="checkbox-item">
+
+                    <input
+                        type="checkbox"
+                        class="utility-check"
+                        value="evenOdd"
+                    >
+
+                    <span>
+                        Even / Odd
+                    </span>
+
+                </label>
+
+
+
+                <label class="checkbox-item">
+
+                    <input
+                        type="checkbox"
+                        class="utility-check"
+                        value="prime"
+                    >
+
+                    <span>
+                        Prime Number
+                    </span>
+
+                </label>
+
+
+
+                <label class="checkbox-item">
+
+                    <input
+                        type="checkbox"
+                        class="utility-check"
+                        value="palindrome"
+                    >
+
+                    <span>
+                        Palindrome
+                    </span>
+
+                </label>
+
+
+
+                <label class="checkbox-item">
+
+                    <input
+                        type="checkbox"
+                        class="utility-check"
+                        value="positive"
+                    >
+
+                    <span>
+                        Positive / Negative
+                    </span>
+
+                </label>
+
+
+
+                <label class="checkbox-item">
+
+                    <input
+                        type="checkbox"
+                        class="utility-check"
+                        value="factorial"
+                    >
+
+                    <span>
+                        Factorial
+                    </span>
+
+                </label>
+
+
+
+                <label class="checkbox-item">
+
+                    <input
+                        type="checkbox"
+                        class="utility-check"
+                        value="reverse"
+                    >
+
+                    <span>
+                        Reverse
+                    </span>
+
+                </label>
+
+
+            </div>
+
+
+
+            <button
+                class="calculate-btn full-width"
+                id="utilityCalculate"
+            >
+
+                Check Number ↗
+
+            </button>
+
+
+
+            <div
+                class="utility-results"
+                id="utilityResults"
+            >
+
+                Select one or more operations.
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         UNIT CONVERTER TAB
+         ================================================== -->
+
+    <section
+        id="converter"
+        class="section"
+    >
+
+
+        <div class="single-card">
+
+
+            <div class="card-header">
+
+
+                <div>
+
+                    <span class="badge converter-badge">
+                        CONVERTER
+                    </span>
+
+
+                    <h2>
+                        Unit Converter
+                    </h2>
+
+                </div>
+
+
+                <span class="card-description">
+                    Convert common units
+                </span>
+
+
+            </div>
+
+
+
+            <div class="input-group">
+
+
+                <label>
+                    Conversion Type
+                </label>
+
+
+                <select id="conversionType">
+
+
+                    <option value="fToC">
+                        Fahrenheit → Celsius
+                    </option>
+
+
+                    <option value="cToF">
+                        Celsius → Fahrenheit
+                    </option>
+
+
+                    <option value="kmToMiles">
+                        Kilometers → Miles
+                    </option>
+
+
+                    <option value="milesToKm">
+                        Miles → Kilometers
+                    </option>
+
+
+                    <option value="kgToLb">
+                        Kilograms → Pounds
+                    </option>
+
+
+                    <option value="lbToKg">
+                        Pounds → Kilograms
+                    </option>
+
+
+                    <option value="mToFt">
+                        Meters → Feet
+                    </option>
+
+
+                    <option value="ftToM">
+                        Feet → Meters
+                    </option>
+
+
+                </select>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+
+                <label>
+                    Enter Value
+                </label>
+
+
+                <input
+                    type="number"
+                    id="conversionValue"
+                    placeholder="Enter value"
+                >
+
+            </div>
+
+
+
+            <button
+                class="calculate-btn full-width"
+                id="convertButton"
+            >
+
+                Convert ↗
+
+            </button>
+
+
+
+            <div class="result-box">
+
+
+                <span class="result-label">
+                    RESULT
+                </span>
+
+
+                <strong id="conversionResult">
+                    —
+                </strong>
+
+
+                <small>
+                    Enter a value and click Convert
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         AGE CALCULATOR TAB
+         ================================================== -->
+
+    <section
+        id="age"
+        class="section"
+    >
+
+
+        <div class="single-card">
+
+
+            <div class="card-header">
+
+
+                <div>
+
+                    <span class="badge age-badge">
+                        AGE
+                    </span>
+
+
+                    <h2>
+                        Age Calculator
+                    </h2>
+
+                </div>
+
+
+                <span class="card-description">
+                    Calculate exact age
+                </span>
+
+
+            </div>
+
+
+
+            <div class="input-group">
+
+
+                <label>
+                    Date of Birth
+                </label>
+
+
+                <input
+                    type="date"
+                    id="birthDate"
+                >
+
+            </div>
+
+
+
+            <button
+                class="calculate-btn full-width"
+                id="ageCalculate"
+            >
+
+                Calculate Age ↗
+
+            </button>
+
+
+
+            <div class="age-result">
+
+
+                <div class="age-number">
+
+                    <strong id="ageYears">
+                        0
+                    </strong>
+
+                    <span>
+                        Years
+                    </span>
+
+                </div>
+
+
+
+                <div class="age-number">
+
+                    <strong id="ageMonths">
+                        0
+                    </strong>
+
+                    <span>
+                        Months
+                    </span>
+
+                </div>
+
+
+
+                <div class="age-number">
+
+                    <strong id="ageDays">
+                        0
+                    </strong>
+
+                    <span>
+                        Days
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <p
+                class="age-message"
+                id="ageMessage"
+            >
+
+                Enter your date of birth.
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         HISTORY TAB
+         ================================================== -->
+
+    <section
+        id="history"
+        class="section"
+    >
+
+
+        <div class="single-card">
+
+
+            <div class="card-header">
+
+
+                <div>
+
+                    <span class="badge history-badge">
+                        HISTORY
+                    </span>
+
+
+                    <h2>
+                        Calculation History
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="danger-btn"
+                    id="clearHistory"
+                >
+
+                    Clear All
+
+                </button>
+
+
+            </div>
+
+
+
+            <div
+                class="history-list"
+                id="historyList"
+            >
+
+                No calculations yet.
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         FOOTER
+         ================================================== -->
+
+    <footer>
+
+        <p>
+            Multi-Functional Calculator © 2026
+        </p>
+
+
+        <p>
+            Built with Java SE • HTML • CSS • JavaScript
+        </p>
+
+    </footer>
+
+
+</div>
+
+
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
